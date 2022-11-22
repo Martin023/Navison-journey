@@ -1,0 +1,9 @@
+Solving the "error 8192 incorrect language choosen" when opening microsoft Navision development environment.
+
+This error has nothing to do with Navision but rather the language settings on your own machine or computer.
+To solve this error, open the control center on windows computer > region and languages > language select English(US) and save the settings.
+Next restart your Navison development for the change to apply or take effect.
+Voila you should now be able to open the environment and develop away!
+
+Hope this short explanation works for you.
+For any further questions please reach me through my contacts.
