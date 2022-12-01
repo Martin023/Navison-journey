@@ -1,0 +1,3 @@
+This procedure explains in details how to perfom a fixed asset writedown:
+* Go - to FA setup and update your matching Subclass in the posting groups and select a writedown account from the g/l ledger account.
+* Update the gl account choosen to be a POSTING type account incase of any errors.
