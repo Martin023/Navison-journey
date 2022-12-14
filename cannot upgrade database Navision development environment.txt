@@ -1,0 +1,13 @@
+delete the table data from SQL with
+
+TRUNCATE TABLE [dbo].[NAV App Tenant App]
+
+After this,we upgraded the database from Developer environment, Started the NAV service, and ran a Schema Sync.
+
+After this, we had new records automatiaclly created in the [NAV App Tenant App] table, and everything seems to be working fine
+
+
+Would be nice to have an official solution from microsoft. So far this is not documented in the installation process:
+
+
+support.microsoft.com/.../how-to-install-a-microsoft-dynamics-nav-2018-cumulative-update
