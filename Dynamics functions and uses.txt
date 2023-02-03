@@ -11,5 +11,8 @@ USING PERMISSIONS:
 GET(pk of subtype); -> Gets the record of a table using its primary key 
 - You dont have to use reset first as in the case of SETRANGE();
 
+rec.TESTFIELD(field,[value]); -> Compares field to value, If they dont match an error is displayed. 
+Hoewever, if value is ommited, Then it checks for a value in the field, If absent an error msg is displayed.
 
+rec/table.COUNT; -> Returns the number of records in the specific table after application of filters.
 
