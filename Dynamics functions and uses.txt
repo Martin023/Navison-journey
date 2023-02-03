@@ -1,0 +1,15 @@
+TESTFIELD(fieldVal);
+Breaks code in case the field value is not found.
+
+CurrPage - Current page::Used to get the current page as a variable.
+
+CurrPage.EDITABLE := FALSE;  -> Enabling or disabling editiong on a page
+
+USING PERMISSIONS:
+- Check if user has a particular permission by using setrange(); if the person does, then enable od=r disable permissions.
+
+GET(pk of subtype); -> Gets the record of a table using its primary key 
+- You dont have to use reset first as in the case of SETRANGE();
+
+
+
