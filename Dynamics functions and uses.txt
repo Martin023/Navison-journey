@@ -6,7 +6,7 @@ CurrPage - Current page::Used to get the current page as a variable.
 CurrPage.EDITABLE := FALSE;  -> Enabling or disabling editiong on a page
 
 USING PERMISSIONS:
-- Check if user has a particular permission by using setrange(); if the person does, then enable od=r disable permissions.
+- Check if user has a particular permission by using setrange(); if the person does, then enable or disable access/editing etc.
 
 GET(pk of subtype); -> Gets the record of a table using its primary key 
 - You dont have to use reset first as in the case of SETRANGE();
@@ -16,3 +16,21 @@ Hoewever, if value is ommited, Then it checks for a value in the field, If absen
 
 rec/table.COUNT; -> Returns the number of records in the specific table after application of filters.
 
+WITH Statement -> Conditional statement that is used to define the scope of a code block. It is used to create a local scope within a function or trigger 
+---------------SYNTAX OF WITH:-----------
+
+WITH Variable1 [AS Type]
+   [Local Declarations]
+BEGIN
+   [Statements]
+END;
+-------------------------------------------
+
+record.get();/record.GET; -> Used to retrieve information from a table. Without paramenters, ut fetches all records in the  table.
+With parameters, it gets fields where the parameter in a PKey. You do not have to use record.RESET; function earlier before using the get function.
+
+FORMAT(); -> Used to format a string into a specific format such as adding trailing zeros or formating a data. It 
+takes a string as an argument and modifies it according to a specified format. 
+example : With numbers, it rounds it 
+eg  FORMAT(123.456, 2); // 123.47 
+With no params, it rounds to 0dp.
