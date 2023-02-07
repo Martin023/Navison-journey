@@ -1,9 +1,0 @@
-How o solve "The system is not accessible, because it requires a schema synchronisation error after service restart" 
-This error appears when you try to open the Navision windows client after a data change in the tables in the Navison Development environment.
-To solve this error 
-* Open a table,
-* Head to the tools section,
-* Select sync for all tables with validation.
-* Restart the Navison client 
-Your error should now be solved now you can open the Navision client.
-
