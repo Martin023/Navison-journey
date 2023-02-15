@@ -34,3 +34,22 @@ takes a string as an argument and modifies it according to a specified format.
 example : With numbers, it rounds it 
 eg  FORMAT(123.456, 2); // 123.47 
 With no params, it rounds to 0dp.
+With string it : 
+
+
+
+DATE2DMY(date,1,2or3); -> converts a date data type value to a string with DD/MM/YYYY format.
+1 -returns day as an integer
+2- returns no as integer
+3- year as integer
+
+
+It takes a valid date or datetime expression as its parameter and returns a string.
+It may take 3 params Date to be converted, the delimiter->Separator eg-,/or . And a boolean parameter for whether to include day of week.(1,0 or true and false)
+
+TIME(); Is a function that is used to return the time of day using 24hr clock system. It returns a datetime value.
+Example use : x:=TIME;
+The result will be the current date and time, in the format of yyyy-mm-dd hh:mm:ss. For example: 2020-10-09 12:15:00.
+
+
+DELCHR() -> 
