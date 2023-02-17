@@ -52,4 +52,27 @@ Example use : x:=TIME;
 The result will be the current date and time, in the format of yyyy-mm-dd hh:mm:ss. For example: 2020-10-09 12:15:00.
 
 
-DELCHR() -> 
+DELCHR() -> Deletes one or more characters in a string. [It is case sensitive]
+-NewString := DELCHR(String[, Where][, Which])
+String : String to be altered
+Where : Specifies where to delete characters, can be a text constant or code.
+The Which parameter contains an array of the characters that you want to delete. 
+The order of the characters is of no significance. If String contains a character that is specified in Which, it is deleted from String.
+You can include one or more of the following characters in the Where string:
+
+= To delete any character in String that matches a character in Which (default)
+
+< To delete any leading character in String that matches a character in Which
+
+> To delete any trailing character in String that matches a character in Which
+
+
+Which : Specifies the characters that you want to delete.
+Type: Text or code
+The default is a space character.
+
+ReqFilterFields -> This is a report property put on a dataitem. It sets fields to be automatically added in the tab of the request page from the dataitem.
+The user can set filters on these fields.
+
+NB - You can remove the request page by using the UseRequestPage property and set it to NO.
+
