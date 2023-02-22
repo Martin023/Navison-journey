@@ -80,3 +80,24 @@ record.SETCURRENTKEY(FIeld,[field1,...FieldN] -> set current key sets the primar
 which tells the database engine how to locate and access the records in the table. This optimizes how records are filtered/ searched through the table.
 The fields are the ones to be made primary keys.Setting the primary key helps the database engine to optimize certain operations, such as searching for a specific record,
  sorting the records in a specific order, or filtering records based on a specific field.
+
+record.LOCKABLE([Wait:boolean],[versionCheck:boolean]); -> locks a table to prevent write transactions that conflict each other.
+wait -> Specifies what to do if the table is already locked.
+Because all write operations automatically lock the table that is being used, LOCKTABLE appears unnecessary.
+
+DELCHR(String[, Where][, Which]) -> Deketes one or more chnaracters in a string. 
+You can include one or more of the following characters in the Where string:
+
+	= To delete any character in String that matches a character in Which (default)
+
+	< To delete any leading character in String that matches a character in Which
+
+	> To delete any trailing character in String that matches a character in Which
+
+Which :
+Type: Text or code
+
+Specifies the characters that you want to delete.
+
+The default is a space character.
+
