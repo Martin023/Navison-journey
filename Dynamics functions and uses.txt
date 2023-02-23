@@ -100,4 +100,10 @@ Type: Text or code
 Specifies the characters that you want to delete.
 
 The default is a space character.
+STRPOS(String, Substring) -> finds the first occurence of a substring in a string.
+it returns an integer, and takes CODE or String data types as params.
+The STRPOS function is case-sensitive.
+
+
+## The diffrence between Rec and xRec is that xRec holds the prev value of the current record. If modified then Rec <> xRec, otherwise, they are =
 
