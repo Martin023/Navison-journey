@@ -107,3 +107,6 @@ The STRPOS function is case-sensitive.
 
 ## The diffrence between Rec and xRec is that xRec holds the prev value of the current record. If modified then Rec <> xRec, otherwise, they are =
 
+record.IsEmpty() -> (Works same as findfirst) Checks if there are records present after a filter / range is applied on a table.
+
+
