@@ -109,4 +109,7 @@ The STRPOS function is case-sensitive.
 
 record.IsEmpty() -> (Works same as findfirst) Checks if there are records present after a filter / range is applied on a table.
 
+currpage.UPDATE() -> Saves the current record and then updates the controls in the page. 
+If you set the SaveRecord parameter to false, this function will not save the record before the page is updated.
+
 
