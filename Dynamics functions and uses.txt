@@ -9,7 +9,10 @@ USING PERMISSIONS:
 - Check if user has a particular permission by using setrange(); if the person does, then enable or disable access/editing etc.
 
 GET(pk of subtype); -> Gets the record of a table using its primary key 
+. GET retrieves a single record, based on the Primary Key only. The oparams are PKs only even if more than one.
 - You dont have to use reset first as in the case of SETRANGE();
+Syntax :: [BooleanValue :=] Record.GET ( [KeyFieldValue1] [,KeyFieldValue2] ,...)
+Asigning the GET function result to BooleanValue is optional
 
 rec.TESTFIELD(field,[value]); -> Compares field to value, If they dont match an error is displayed. 
 Hoewever, if value is ommited, Then it checks for a value in the field, If absent an error msg is displayed.
@@ -18,6 +21,7 @@ rec/table.COUNT; -> Returns the number of records in the specific table after ap
 
 WITH Statement -> Conditional statement that is used to define the scope of a code block. It is used to create a local scope within a function or trigger 
 ---------------SYNTAX OF WITH:-----------
+-Variable1 must be a rec.
 
 WITH Variable1 [AS Type]
    [Local Declarations]
@@ -77,7 +81,7 @@ The user can set filters on these fields.
 NB - You can remove the request page by using the UseRequestPage property and set it to NO.
 
 record.SETCURRENTKEY(FIeld,[field1,...FieldN] -> set current key sets the primary key of the table that you are working with, 
-which tells the database engine how to locate and access the records in the table. This optimizes how records are filtered/ searched through the table.
+which tells the database engine how to locate and access the records in the table for subsequent processing. This optimizes how records are filtered/ searched through the table.
 The fields are the ones to be made primary keys.Setting the primary key helps the database engine to optimize certain operations, such as searching for a specific record,
  sorting the records in a specific order, or filtering records based on a specific field.
 
@@ -112,4 +116,31 @@ record.IsEmpty() -> (Works same as findfirst) Checks if there are records presen
 currpage.UPDATE() -> Saves the current record and then updates the controls in the page. 
 If you set the SaveRecord parameter to false, this function will not save the record before the page is updated.
 
+--------------------------------------------------------------------------------
+DIALOG FUNCS : The purpose of these 
+functions is to allow for communications (that is, dialog) between the system and 
+the user.  There are 11 dialog funcs.
+eg. Message, Error etc.
+
+The substitution string (%1-10)-> inseting data values to the dialog functions. You can have up to 10 in a single dialog func.
+
+BooleanValue := CONFIRM(String [, Default] [, Value1] ,...) 
+where Default choice is TRUE or FALSE and there are as many ValueX entries as 
+there are %X substitution strings (up to ten).
+If you just code CONFIRM(String), the Default choice will be False. 
+An additional feature is the use of the backslash (\) which forces a new line in the 
+displayed message.
+
+STRMENU has the following syntax:
+IntegerValue := STRMENU(StringVariable of Options separated by commas 
+[, OptionDefault][, Instruction])
+OptionDefault is an integer representing which of the options 
+will be selected by default when the menu displays.
+Instruction - is a text string which will be display above the list of options.
+If the user responds Cancel or presses the Esc key, the value returned by the 
+function is 0.
+
+------------------------------------------------------------------------------------
+If SETRANGE is executed without any From or To values, it will 
+clear all the filters on the field. 
 
